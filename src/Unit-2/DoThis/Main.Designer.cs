@@ -35,6 +35,7 @@
             this.buttonCpu = new System.Windows.Forms.Button();
             this.buttonMemory = new System.Windows.Forms.Button();
             this.buttonDisk = new System.Windows.Forms.Button();
+            this.buttonPauseResume = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,22 @@
             this.buttonDisk.UseVisualStyleBackColor = true;
             this.buttonDisk.Click += new System.EventHandler(this.buttonDisk_Click);
             // 
+            // buttonPauseResume
+            // 
+            this.buttonPauseResume.Location = new System.Drawing.Point(568, 107);
+            this.buttonPauseResume.Name = "buttonPauseResume";
+            this.buttonPauseResume.Size = new System.Drawing.Size(104, 52);
+            this.buttonPauseResume.TabIndex = 4;
+            this.buttonPauseResume.Text = "PAUSE ||";
+            this.buttonPauseResume.UseVisualStyleBackColor = true;
+            this.buttonPauseResume.Click += new System.EventHandler(this.buttonPauseResume_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 446);
+            this.Controls.Add(this.buttonPauseResume);
             this.Controls.Add(this.buttonDisk);
             this.Controls.Add(this.buttonMemory);
             this.Controls.Add(this.buttonCpu);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.Button buttonCpu;
         private System.Windows.Forms.Button buttonMemory;
         private System.Windows.Forms.Button buttonDisk;
+        private System.Windows.Forms.Button buttonPauseResume;
     }
 }
 
