@@ -32,7 +32,9 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.sysChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCpu = new System.Windows.Forms.Button();
+            this.buttonMemory = new System.Windows.Forms.Button();
+            this.buttonDisk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,22 +55,44 @@
             this.sysChart.TabIndex = 0;
             this.sysChart.Text = "sysChart";
             // 
-            // button1
+            // buttonCpu
             // 
-            this.button1.Location = new System.Drawing.Point(582, 379);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCpu.Location = new System.Drawing.Point(568, 208);
+            this.buttonCpu.Name = "buttonCpu";
+            this.buttonCpu.Size = new System.Drawing.Size(104, 52);
+            this.buttonCpu.TabIndex = 1;
+            this.buttonCpu.Text = "CPU (OFF)";
+            this.buttonCpu.UseVisualStyleBackColor = true;
+            this.buttonCpu.Click += new System.EventHandler(this.buttonCpu_Click);
+            // 
+            // buttonMemory
+            // 
+            this.buttonMemory.Location = new System.Drawing.Point(568, 281);
+            this.buttonMemory.Name = "buttonMemory";
+            this.buttonMemory.Size = new System.Drawing.Size(104, 52);
+            this.buttonMemory.TabIndex = 2;
+            this.buttonMemory.Text = "MEMORY (OFF)";
+            this.buttonMemory.UseVisualStyleBackColor = true;
+            this.buttonMemory.Click += new System.EventHandler(this.buttonMemory_Click);
+            // 
+            // buttonDisk
+            // 
+            this.buttonDisk.Location = new System.Drawing.Point(568, 352);
+            this.buttonDisk.Name = "buttonDisk";
+            this.buttonDisk.Size = new System.Drawing.Size(104, 52);
+            this.buttonDisk.TabIndex = 3;
+            this.buttonDisk.Text = "DISK (OFF)";
+            this.buttonDisk.UseVisualStyleBackColor = true;
+            this.buttonDisk.Click += new System.EventHandler(this.buttonDisk_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 446);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonDisk);
+            this.Controls.Add(this.buttonMemory);
+            this.Controls.Add(this.buttonCpu);
             this.Controls.Add(this.sysChart);
             this.Name = "Main";
             this.Text = "System Metrics";
@@ -81,7 +105,9 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart sysChart;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCpu;
+        private System.Windows.Forms.Button buttonMemory;
+        private System.Windows.Forms.Button buttonDisk;
     }
 }
 
